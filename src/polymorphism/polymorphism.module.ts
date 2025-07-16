@@ -19,7 +19,10 @@ import { PolymorphismController } from './polymorphism.controller';
     BoxerStrategy,
     {
       provide: 'DOG_STRATEGIES',
-      useFactory: (doodle, boxer) => [doodle, boxer],
+      useFactory: (doodle, boxer) => ({
+        Doodle: doodle,
+        Boxer: boxer,
+      }),
       inject: [DoodleStrategy, BoxerStrategy],
     },
   ],
