@@ -1,8 +1,10 @@
-import { Body, Controller, Post } from '@nestjs/common';
+import { Body, Controller, Post, UseInterceptors } from '@nestjs/common';
 import { CatFactoryService } from './catFactory.service';
+import { DiagnosticInterceptor } from './diagnostic.interceptor';
 import { DogFactoryService } from './dogFactory.service';
 import { Cat, Dog } from './types';
 
+@UseInterceptors(DiagnosticInterceptor)
 @Controller()
 export class PolymorphismController {
   constructor(
