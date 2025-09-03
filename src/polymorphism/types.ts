@@ -2,6 +2,7 @@ export interface Cat {
   name: string;
   breed: 'Maine Coon' | 'Chartreux';
   age: number;
+  sex: 'male' | 'female';
 }
 
 export interface CatFactory {
@@ -12,6 +13,7 @@ export interface Dog {
   name: string;
   breed: 'Doodle' | 'Boxer';
   age: number;
+  sex: 'male' | 'female';
 }
 
 export interface DogFactory {
