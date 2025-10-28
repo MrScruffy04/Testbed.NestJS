@@ -8,6 +8,7 @@ import { DoodleStrategy } from './doodle.strategy'
 import { GeneticRandomizerService } from './geneticRandomizer.service'
 import { MaineCoonFactory } from './maineCoon.service'
 import { PetController } from './pet.controller'
+import { PetsService } from './pets.service'
 
 @Module({
   imports: [],
@@ -31,6 +32,7 @@ import { PetController } from './pet.controller'
       provide: GeneticRandomizerService,
       useFactory: () => new GeneticRandomizerService(uuid()),
     },
+    PetsService,
   ],
 })
 export class PetModule {}
