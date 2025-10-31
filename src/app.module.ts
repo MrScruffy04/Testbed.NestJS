@@ -1,10 +1,10 @@
-import { Module } from '@nestjs/common';
-import { AppController } from './app.controller';
-import { AppService } from './app.service';
-import { PolymorphismModule } from './polymorphism/polymorphism.module';
+import { Module } from '@nestjs/common'
+import { AppController } from './app.controller'
+import { AppService } from './app.service'
+import { PetModule } from './modules/pets/pet.module'
 
 @Module({
-  imports: [PolymorphismModule],
+  imports: [PetModule],
   controllers: [AppController],
   providers: [AppService],
 })
