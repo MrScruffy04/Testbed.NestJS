@@ -1,4 +1,4 @@
-import { Body, Controller, Header, Post } from '@nestjs/common'
+import { Body, Controller, Header, HttpCode, Post } from '@nestjs/common'
 import { EventService } from './event.service'
 import { OptService } from './opt.service'
 import { PollService } from './poll.service'
@@ -16,30 +16,35 @@ export class OpenAdrController {
   ) {}
 
   @Post('/OadrPoll')
+  @HttpCode(200)
   @Header('Content-Type', 'application/xml')
   async handlePoll(@Body() xmlString: string): Promise<string> {
     return this.pollService.handle(xmlString);
   }
 
   @Post('/EiRegisterParty')
+  @HttpCode(200)
   @Header('Content-Type', 'application/xml')
   async handleRegistration(@Body() xmlString: string): Promise<string> {
     return this.registrationService.handle(xmlString);
   }
 
   @Post('/EiEvent')
+  @HttpCode(200)
   @Header('Content-Type', 'application/xml')
   async handleEvent(@Body() xmlString: string): Promise<string> {
     return this.eventService.handle(xmlString);
   }
 
   @Post('/EiReport')
+  @HttpCode(200)
   @Header('Content-Type', 'application/xml')
   async handleReport(@Body() xmlString: string): Promise<string> {
     return this.reportService.handle(xmlString);
   }
 
   @Post('/EiOpt')
+  @HttpCode(200)
   @Header('Content-Type', 'application/xml')
   async handleOpt(@Body() xmlString: string): Promise<string> {
     return this.optService.handle(xmlString);
