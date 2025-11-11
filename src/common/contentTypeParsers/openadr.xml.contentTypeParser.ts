@@ -5,7 +5,6 @@ const xmlContentTypeParser: FastifyBodyParser<string | Buffer> = async (
   rawBody: string | Buffer,
 ): Promise<string | undefined> => {
   const bodyStr = rawBody.toString()
-  console.log(bodyStr)
   return bodyStr
 }
 
