@@ -1,9 +1,9 @@
-import { Body, Controller, Header, HttpCode, Post } from '@nestjs/common'
-import { EventService } from './event.service'
-import { OptService } from './opt.service'
-import { PollService } from './poll.service'
-import { RegistrationService } from './registration.service'
-import { ReportService } from './report.service'
+import { Body, Controller, Header, HttpCode, Post } from '@nestjs/common';
+import { EventService } from './event.service';
+import { OptService } from './opt.service';
+import { PollService } from './poll.service';
+import { RegistrationService } from './registration.service';
+import { ReportService } from './report.service';
 
 @Controller('/OpenADR2/Simple/2.0b')
 export class OpenAdrController {

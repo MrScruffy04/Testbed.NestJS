@@ -1,15 +1,17 @@
-import { FastifyBodyParser, FastifyInstance, FastifyRequest } from 'fastify'
+import { FastifyBodyParser, FastifyInstance, FastifyRequest } from 'fastify';
 
 const xmlContentTypeParser: FastifyBodyParser<string | Buffer> = async (
-  _request: FastifyRequest, 
+  _request: FastifyRequest,
   rawBody: string | Buffer,
 ): Promise<string | undefined> => {
-  const bodyStr = rawBody.toString()
-  return bodyStr
-}
+  const bodyStr = rawBody.toString();
+  return bodyStr;
+};
 
-export const XmlContentTypeParserParams: Parameters<FastifyInstance['addContentTypeParser']> = [
+export const XmlContentTypeParserParams: Parameters<
+  FastifyInstance['addContentTypeParser']
+> = [
   ['application/xml', 'text/xml'],
   { parseAs: 'string' },
   xmlContentTypeParser,
-]
+];
