@@ -1,0 +1,14 @@
+version: "2"
+region: us
+
+# NOTE: Subdomain is only allowed for paid accounts
+
+tunnels:
+  nestjs:
+    proto: http
+    addr: 3000
+    schemes:
+      - http
+      - https
+    subdomain: osd-testharness
+    # https://osd-testharness.ngrok.io
