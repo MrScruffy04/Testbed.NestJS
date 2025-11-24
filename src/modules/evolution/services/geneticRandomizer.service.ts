@@ -1,4 +1,4 @@
-import { Injectable } from '@nestjs/common';
+import { Injectable } from '@nestjs/common'
 
 // Applying REQUEST scope here doesn't matter if the controller is scoped to DEFAULT (singleton)
 @Injectable()
