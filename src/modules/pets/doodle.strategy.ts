@@ -1,6 +1,6 @@
-import { Injectable } from '@nestjs/common'
-import { GeneticRandomizerService } from '../evolution/services/geneticRandomizer.service'
-import { Dog, DogFactory } from './types'
+import { Injectable } from '@nestjs/common';
+import { GeneticRandomizerService } from '../evolution/services/geneticRandomizer.service';
+import { Dog, DogFactory } from './types';
 
 @Injectable()
 export class DoodleStrategy implements DogFactory {

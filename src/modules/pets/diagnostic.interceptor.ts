@@ -3,9 +3,9 @@ import {
   ExecutionContext,
   Injectable,
   NestInterceptor,
-} from '@nestjs/common'
-import { map, Observable } from 'rxjs'
-import { GeneticRandomizerService } from '../evolution/services/geneticRandomizer.service'
+} from '@nestjs/common';
+import { map, Observable } from 'rxjs';
+import { GeneticRandomizerService } from '../evolution/services/geneticRandomizer.service';
 
 @Injectable()
 export class DiagnosticInterceptor implements NestInterceptor {

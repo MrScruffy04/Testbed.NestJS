@@ -1,12 +1,12 @@
-import { Module } from '@nestjs/common'
-import { BoxerStrategy } from './boxer.strategy'
-import { CatFactoryService } from './catFactory.service'
-import { ChartreuxFactory } from './chartreux.service'
-import { DogFactoryService } from './dogFactory.service'
-import { DoodleStrategy } from './doodle.strategy'
-import { MaineCoonFactory } from './maineCoon.service'
-import { PetController } from './pet.controller'
-import { PetsService } from './pets.service'
+import { Module } from '@nestjs/common';
+import { BoxerStrategy } from './boxer.strategy';
+import { CatFactoryService } from './catFactory.service';
+import { ChartreuxFactory } from './chartreux.service';
+import { DogFactoryService } from './dogFactory.service';
+import { DoodleStrategy } from './doodle.strategy';
+import { MaineCoonFactory } from './maineCoon.service';
+import { PetController } from './pet.controller';
+import { PetsService } from './pets.service';
 
 @Module({
   imports: [],

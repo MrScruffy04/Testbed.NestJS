@@ -1,9 +1,9 @@
-import { DynamicModule, Module } from '@nestjs/common'
-import { v4 as uuid } from 'uuid'
-import { GeneticRandomizerService } from '../evolution/services/geneticRandomizer.service'
+import { DynamicModule, Module } from '@nestjs/common';
+import { v4 as uuid } from 'uuid';
+import { GeneticRandomizerService } from '../evolution/services/geneticRandomizer.service';
 
 interface EvolutionModuleOptions {
-  geneticRandomizerSeed?: string,
+  geneticRandomizerSeed?: string;
 }
 
 @Module({})
@@ -15,10 +15,13 @@ export class EvolutionModule {
       providers: [
         {
           provide: GeneticRandomizerService,
-          useFactory: () => new GeneticRandomizerService(options.geneticRandomizerSeed ?? uuid()),
+          useFactory: () =>
+            new GeneticRandomizerService(
+              options.geneticRandomizerSeed ?? uuid(),
+            ),
         },
       ],
       exports: [GeneticRandomizerService],
-    }
+    };
   }
 }

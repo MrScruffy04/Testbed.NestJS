@@ -1,7 +1,7 @@
-import { Body, Controller, Post, UseInterceptors } from '@nestjs/common'
-import { DiagnosticInterceptor } from './diagnostic.interceptor'
-import { PetsService } from './pets.service'
-import { Cat, Dog } from './types'
+import { Body, Controller, Post, UseInterceptors } from '@nestjs/common';
+import { DiagnosticInterceptor } from './diagnostic.interceptor';
+import { PetsService } from './pets.service';
+import { Cat, Dog } from './types';
 
 @UseInterceptors(DiagnosticInterceptor)
 @Controller()
