@@ -13,4 +13,16 @@ export class GeneticRandomizerService {
     );
     return Math.random() > 0.5 ? 'male' : 'female';
   }
+
+  getEnvironmentalConditions(): 'harsh' | 'normal' | 'favorable' {
+    const num = Math.random();
+
+    if (num < 0.33) {
+      return 'harsh';
+    } else if (num < 0.8) {
+      return 'normal';
+    } else {
+      return 'favorable';
+    }
+  }
 }

@@ -5,7 +5,7 @@ import {
   NestInterceptor,
 } from '@nestjs/common';
 import { map, Observable } from 'rxjs';
-import { GeneticRandomizerService } from './geneticRandomizer.service';
+import { GeneticRandomizerService } from '../evolution/services/geneticRandomizer.service';
 
 @Injectable()
 export class DiagnosticInterceptor implements NestInterceptor {

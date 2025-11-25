@@ -1,7 +1,7 @@
-import { Injectable } from '@nestjs/common'
-import { CatFactoryService } from './catFactory.service'
-import { DogFactoryService } from './dogFactory.service'
-import { Cat, Dog } from './types'
+import { Injectable } from '@nestjs/common';
+import { CatFactoryService } from './catFactory.service';
+import { DogFactoryService } from './dogFactory.service';
+import { Cat, Dog } from './types';
 
 @Injectable()
 export class PetsService {
